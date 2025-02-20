@@ -83,6 +83,7 @@ body {
 
 .itemDiv {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     padding: 5px;
     justify-content: space-between;
@@ -90,7 +91,7 @@ body {
 
 .itemContent, .newInput {
     flex-grow: 1;
-    margin: 0 10px;
+    margin: auto;
 }
 
 .newInput {
@@ -155,12 +156,19 @@ body {
     
     .itemDiv {
         flex-direction: row;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
-        width: 100%;
+        width: 98%;
+        overflow: hidden;
     }
 
     .newInput {
-        width: 70%;
+        width: 40%;
     }
+    .edit, .remove {
+        max-width: 100%;
+        margin-left:1px;
+    }
+   
 }
