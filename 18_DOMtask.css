@@ -1,0 +1,145 @@
+
+body {
+    box-sizing: border-box;
+    margin:10% 20%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: #f4f4f4; /* Light gray background */
+    background: linear-gradient(to right, #e6eaed, #43a3e8); /* Light gray to soft blue */
+
+    font-family: Arial, sans-serif;
+}
+
+#container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #007bff; /* Blue border */
+    padding: 10px;
+    border-radius: 10px;
+    min-height: 200px;
+    max-height: 400px;
+    background-color: #ffffff; /* White background */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+#container h1 {
+    text-align: center;
+    color: #007bff; /* Blue */
+    
+}
+
+#inputContainer {
+    margin: 0 15%;
+    display: flex;
+    justify-content:space-between;
+    padding: 2px;
+}
+
+#submit {
+    background-color: #007bff; /* Primary blue */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+#submit:hover {
+    cursor: pointer;
+    background-color: #0056b3; /* Darker blue */
+    color: white;
+}
+
+#inputText {
+    width: 80%;
+    border: 1px solid #007bff; /* Blue border */
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
+    background-color: #f8f9fa; /* Light input background */
+}
+
+#listContainer {
+    width: 70%;
+    margin: auto;
+    flex-grow: inherit;
+    margin-top: 10px;
+    border-radius: 5px;
+    overflow: auto;
+}
+
+#list {
+    padding-left: 0px;
+    list-style-type: none;
+    padding-top: 0px;
+}
+
+.listItem {
+    border: 1px solid #007bff; /* Blue border */
+    background-color: #e9f5ff; /* Light blue */
+    margin: 3px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.listItem:hover {
+    background-color: #d6ebff; /* Slightly darker blue */
+}
+
+.itemDiv {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.itemContent {
+    padding-left: 5px;
+    margin: 0px;
+    color: #333;
+}
+
+.edit {
+    margin-left: auto;
+    background-color: #ffc107; /* Yellow */
+    border: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.edit:hover {
+    background-color: #e0a800; /* Darker yellow */
+}
+.newInput {
+    width: 70%;
+    border: 1px solid #ffc107; /* Yellow border */
+    border-radius: 5px;
+    padding: 2px;
+    margin: 0 5px 0 5px;
+    outline: none;
+    background-color: #fff3cd; /* Light yellow background */
+}
+
+.remove {
+    padding-left: 10px;
+    margin-left: 5px;
+    background-color: #dc3545; /* Red */
+    border: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.remove:hover {
+    background-color: #c82333; /* Darker red */
+}
+
+.complete {
+    color: #28a745; /* Green */
+    font-weight: bold;
+}
