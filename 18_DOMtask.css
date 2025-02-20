@@ -31,9 +31,10 @@ body {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content:flex-start;
+    justify-content: space-between;
     padding: 5px;
-    width: 100%;;
+    padding-left:1px;
+    width: 90%;
 }
 
 #inputText {
@@ -41,7 +42,6 @@ body {
     border: 1px solid #007bff;
     border-radius: 5px;
     padding: 5px;
-    margin-left: 10%;
     outline: none;
     background-color: #f8f9fa;
 }
@@ -138,26 +138,29 @@ body {
 
 @media screen and (max-width: 600px) {
     #inputContainer {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
+        justify-content: space-between;
+        width: 100%;
     }
     
     #inputText {
-        width: 90%;
-        margin-bottom: 5px;
+        width: 70%;
     }
 
     #submit {
-        width: 95%;
-        align-self: center;
+        width: auto;
+        align-self: flex-end;
     }
     
     .itemDiv {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
     }
 
     .newInput {
-        width: 100%;
+        width: 70%;
     }
 }
