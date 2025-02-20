@@ -4,7 +4,8 @@ body {
     align-items: center;
     display: flex;
     justify-content: center;
-    background: linear-gradient(to right, #e6eaed, #43a3e8);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+
     font-family: Arial, sans-serif;
 }
 
@@ -93,9 +94,12 @@ body {
     flex-grow: 1;
     margin: auto;
 }
+.itemContent {
+    padding-left: 5px;
+}
 
 .newInput {
-    width: 100%;
+    width: 50%;
     border: 1px solid #ffc107;
     border-radius: 5px;
     padding: 5px;
@@ -104,7 +108,7 @@ body {
     font-size: 14px;
 }
 
-.edit, .remove {
+.edit, .remove,.done {
     padding: 5px 8px;
     border-radius: 5px;
     cursor: pointer;
@@ -117,10 +121,19 @@ body {
     border: none;
     color: black;
 }
+.done{
+    background-color: #09e464;
+    border: none;
+
+}
+.done:hover{
+    background-color: #0f9d58;
+}
 
 .edit:hover {
     background-color: #e0a800;
 }
+
 
 .remove {
     background-color: #dc3545;
