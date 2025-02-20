@@ -1,69 +1,68 @@
-
 body {
     box-sizing: border-box;
-    margin:10% 20%;
+    margin: 5% auto;
     align-items: center;
     display: flex;
     justify-content: center;
-    background-color: #f4f4f4; /* Light gray background */
-    background: linear-gradient(to right, #e6eaed, #43a3e8); /* Light gray to soft blue */
-
+    background: linear-gradient(to right, #e6eaed, #43a3e8);
     font-family: Arial, sans-serif;
 }
 
 #container {
     width: 90%;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
-    border: 1px solid #007bff; /* Blue border */
+    border: 1px solid #007bff;
     padding: 10px;
     border-radius: 10px;
     min-height: 200px;
     max-height: 400px;
-    background-color: #ffffff; /* White background */
+    background-color: #ffffff;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
 }
+
 #container h1 {
     text-align: center;
-    color: #007bff; /* Blue */
-    
+    color: #007bff;
 }
 
 #inputContainer {
-    margin: 0 15%;
+    margin: 0 auto;
     display: flex;
-    justify-content:space-between;
-    padding: 2px;
+    align-items: center;
+    justify-content:flex-start;
+    padding: 5px;
+    width: 100%;;
+}
+
+#inputText {
+    width: 70%;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 10%;
+    outline: none;
+    background-color: #f8f9fa;
 }
 
 #submit {
-    background-color: #007bff; /* Primary blue */
+    background-color: #007bff;
     color: white;
     border: none;
     padding: 5px 10px;
     border-radius: 5px;
     transition: 0.3s ease-in-out;
+    align-self: flex-end;
 }
 
 #submit:hover {
-    cursor: pointer;
-    background-color: #0056b3; /* Darker blue */
-    color: white;
-}
-
-#inputText {
-    width: 80%;
-    border: 1px solid #007bff; /* Blue border */
-    border-radius: 5px;
-    padding: 5px;
-    outline: none;
-    background-color: #f8f9fa; /* Light input background */
+    background-color: #0056b3;
 }
 
 #listContainer {
-    width: 70%;
+    width: 100%;
     margin: auto;
-    flex-grow: inherit;
     margin-top: 10px;
     border-radius: 5px;
     overflow: auto;
@@ -72,74 +71,93 @@ body {
 #list {
     padding-left: 0px;
     list-style-type: none;
-    padding-top: 0px;
 }
 
 .listItem {
-    border: 1px solid #007bff; /* Blue border */
-    background-color: #e9f5ff; /* Light blue */
+    border: 1px solid #007bff;
+    background-color: #e9f5ff;
     margin: 3px;
     border-radius: 5px;
     transition: 0.3s;
-}
-
-.listItem:hover {
-    background-color: #d6ebff; /* Slightly darker blue */
 }
 
 .itemDiv {
     display: flex;
     align-items: center;
     padding: 5px;
+    justify-content: space-between;
 }
 
-.itemContent {
-    padding-left: 5px;
-    margin: 0px;
-    color: #333;
+.itemContent, .newInput {
+    flex-grow: 1;
+    margin: 0 10px;
+}
+
+.newInput {
+    width: 100%;
+    border: 1px solid #ffc107;
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
+    background-color: #fff3cd;
+    font-size: 14px;
+}
+
+.edit, .remove {
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin-left: 5px;
 }
 
 .edit {
-    margin-left: auto;
-    background-color: #ffc107; /* Yellow */
+    background-color: #ffc107;
     border: none;
-    padding: 5px 8px;
-    border-radius: 5px;
     color: black;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
 }
 
 .edit:hover {
-    background-color: #e0a800; /* Darker yellow */
-}
-.newInput {
-    width: 70%;
-    border: 1px solid #ffc107; /* Yellow border */
-    border-radius: 5px;
-    padding: 2px;
-    margin: 0 5px 0 5px;
-    outline: none;
-    background-color: #fff3cd; /* Light yellow background */
+    background-color: #e0a800;
 }
 
 .remove {
-    padding-left: 10px;
-    margin-left: 5px;
-    background-color: #dc3545; /* Red */
+    background-color: #dc3545;
     border: none;
-    padding: 5px 8px;
-    border-radius: 5px;
     color: white;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
 }
 
 .remove:hover {
-    background-color: #c82333; /* Darker red */
+    background-color: #c82333;
 }
 
 .complete {
-    color: #28a745; /* Green */
+    color: #28a745;
     font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    #inputContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #inputText {
+        width: 90%;
+        margin-bottom: 5px;
+    }
+
+    #submit {
+        width: 95%;
+        align-self: center;
+    }
+    
+    .itemDiv {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .newInput {
+        width: 100%;
+    }
 }
